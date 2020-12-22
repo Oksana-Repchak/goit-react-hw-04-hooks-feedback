@@ -12,13 +12,13 @@ export default function App() {
   const clickActiveItem = item => {
     switch (item) {
       case 'good':
-        return setGood(good + 1);
+        return setGood(prevState => prevState + 1);
 
       case 'neutral':
-        return setNeutral(neutral + 1);
+        return setNeutral(prevState => prevState + 1);
 
       case 'bad':
-        return setBad(bad + 1);
+        return setBad(prevState => prevState + 1);
 
       default:
         return;
